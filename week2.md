@@ -313,6 +313,11 @@ Copilot과 Perplexity는 각각 다른 강점을 보이며, 특정 과제에 따
 
 - 세 가지 질문에 대해 모두 비슷한 수준의 답변을 받았고, 항상 정중하고 일정한 말투로 말투로 답변을 받았다.
 - 다만 신조어에 대해서는 의미를 이해하지 못한 것인지 검색을 한 다음 답변을 해주었다.
+  <img width="532" height="574" alt="스크린샷 2025-08-01 오후 1 39 54" src="https://github.com/user-attachments/assets/4e5ddf08-0ae0-48af-86c9-70c8683f24fd" />
+  
+<img width="532" height="612" alt="스크린샷 2025-08-01 오후 1 40 14" src="https://github.com/user-attachments/assets/2218b509-9cd4-45ba-bd70-4e6e117da968" />
+
+<img width="532" height="553" alt="스크린샷 2025-08-01 오후 1 40 31" src="https://github.com/user-attachments/assets/43006c9c-ce83-4674-b0cf-36f3b19e4f5f" />
 
 ### 정리
 
