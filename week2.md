@@ -208,7 +208,7 @@ AI가 사실 오류나 논리적 비약을 스스로 식별하고 교정할 수 
 
 약간 하나 추측성이라면 내가 바보인척을 해서 그런지 AI가 좀 더 구체적으로 작성을 해주는 느낌이었다. 보통 뭉뚱그려서 답변하는 경우도 있고 AI가 작성한게 티가 나는데 사람이 쓴 것처럼 느껴져서 놀라웠다. 
 
-![](https://velog.velcdn.com/images/dubu1001/post/a4f85942-8ed3-4743-89f3-4b5b2e9f5a9c/image.png)
+<img src="https://velog.velcdn.com/images/dubu1001/post/a4f85942-8ed3-4743-89f3-4b5b2e9f5a9c/image.png" width="300" />
 
 ### Day13~14
 
@@ -218,4 +218,4 @@ AI가 사실 오류나 논리적 비약을 스스로 식별하고 교정할 수 
 
 내 질문에서 논리적 오류를 올바로 잡아주었고 이후 학습에서 내가 알게 된 내용을 AI에게 알려줌으로써 나의 학습에 부족한 부분은 없는지 확인해보면 좋을 것 같다.
 
-![](https://velog.velcdn.com/images/dubu1001/post/d233747a-9f8a-492a-a828-0b11b6aff802/image.png)
+<img src="https://velog.velcdn.com/images/dubu1001/post/d233747a-9f8a-492a-a828-0b11b6aff802/image.png" width="300" />
