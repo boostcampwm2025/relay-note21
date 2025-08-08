@@ -1,0 +1,557 @@
+Running 50 trials/language
+Gen/Repair model: gpt-oss:20b
+Judge model: gpt-oss:20b  (OK if score ≥ 4)
+CSV -> out.csv
+
+[1/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=5671ms, rep=13397ms, judge=7252ms)
+  GT : The sun rises slowly over the quiet valley, painting the sky with gentle colors.
+  M  : The sun rises slowly over the quiet ____ painting the ____ with gentle colors.
+  R  : The sun rises slowly over the quiet sea painting the horizon with gentle colors.
+  J  : Grammatically correct, fluent, and the repaired words fit naturally into the masked blanks.
+
+[1/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=11211ms, rep=11064ms, judge=5971ms)
+  GT : 나는 오늘 아침에 커피를 마시며 책을 읽고 내일 일정을 계획했다.
+  M  : 나는 ____ ____ 커피를 마시며 책을 읽고 내일 일정을 계획했다.
+  R  : 나는 아침에 따뜻한 커피를 마시며 책을 읽고 내일 일정을 계획했다.
+  J  : 문법적으로 맞고 자연스러운 표현
+
+[2/50] EN exact=false slot=1/2 any=true ord=true flu=5/5 ok=true (gen=9864ms, rep=9645ms, judge=4668ms)
+  GT : The cat slept on the warm, soft blanket beside the quiet window.
+  M  : The cat slept on ____ warm, ____ blanket beside the quiet window.
+  R  : The cat slept on a warm, soft blanket beside the quiet window.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked blanks.
+
+[2/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=13495ms, rep=8361ms, judge=6036ms)
+  GT : 나는 오늘 아침에 커피를 마시며 책을 읽고 창밖의 풍경을 바라보았다.
+  M  : 나는 오늘 아침에 커피를 ____ 책을 ____ 창밖의 풍경을 바라보았다.
+  R  : 나는 오늘 아침에 커피를 마시며 책을 읽으며 창밖의 풍경을 바라보았다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 ‘마시며’와 ‘읽으며’가 무리 없이 들어가 문장이 매끄럽게 연결됩니다.
+
+[3/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6003ms, rep=11079ms, judge=5076ms)
+  GT : The sun rises over the quiet valley, painting the sky with golden light.
+  M  : The sun rises over the ____ valley, painting ____ sky with golden light.
+  R  : The sun rises over the rolling valley, painting the sky with golden light.
+  J  : Grammatically correct, fluent, and the repair naturally fits the masked structure.
+
+[3/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=14033ms, rep=13216ms, judge=5377ms)
+  GT : 오늘 아침에 나는 커피 한 잔을 마시며 조용히 책을 읽었다.
+  M  : 오늘 아침에 ____ ____ 한 잔을 마시며 조용히 책을 읽었다.
+  R  : 오늘 아침에 뜨거운 커피 한 잔을 마시며 조용히 책을 읽었다.
+  J  : 문장이 자연스럽고 빈칸에 ‘뜨거운 커피’가 무리 없이 들어가며 문법적으로도 완전합니다.
+
+[4/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=7469ms, rep=3280ms, judge=4290ms)
+  GT : The cat slept on the warm rug beside the quiet window.
+  M  : The cat slept on the ____ rug beside ____ quiet window.
+  R  : The cat slept on the soft rug beside a quiet window.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[4/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=13272ms, rep=11560ms, judge=18479ms)
+  GT : 오늘은 햇살이 밝게 비추며 새들이 노래를 부르고 바람이 살랑살랑 불어와 사람들은 창문을 열고 웃는다.
+  M  : 오늘은 햇살이 밝게 ____ 새들이 노래를 부르고 바람이 살랑살랑 ____ 사람들은 창문을 열고 웃는다.
+  R  : 오늘은 햇살이 밝게 비추고 새들이 노래를 부르고 바람이 살랑살랑 불어 사람들은 창문을 열고 웃는다.
+  J  : 문법적으로 맞고 자연스럽다.
+
+[5/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=7292ms, rep=12927ms, judge=5221ms)
+  GT : The child runs quickly through the bright green field during the warm afternoon.
+  M  : The child runs quickly through the ____ green ____ during the warm afternoon.
+  R  : The child runs quickly through the tall green trees during the warm afternoon.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[5/50] KO exact=false slot=1/2 any=false ord=false flu=4/5 ok=true (gen=9467ms, rep=24746ms, judge=16821ms)
+  GT : 나는 매일 아침 공원에서 산책하며 자연의 소리를 듣는다 그리고 새들의 노래를 들으며 마음이 편안해진다.
+  M  : 나는 매일 아침 ____ 산책하며 자연의 소리를 듣는다 ____ 새들의 노래를 들으며 마음이 편안해진다.
+  R  : 나는 매일 아침 조용히 산책하며 자연의 소리를 듣는다 그리고 새들의 노래를 들으며 마음이 편안해진다.
+  J  : 문법은 맞고 자연스러우나 쉼표가 없어서 약간 어색
+
+[6/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=5768ms, rep=4266ms, judge=4770ms)
+  GT : The cat sat on the mat while the dog slept nearby.
+  M  : The ____ sat on the mat ____ the dog slept nearby.
+  R  : The cat sat on the mat while the dog slept nearby.
+  J  : Grammatically correct, fluent, and the repaired sentence naturally completes the masked structure.
+
+[6/50] KO exact=false slot=1/2 any=false ord=false flu=2/5 ok=false (gen=12711ms, rep=262600ms, judge=15782ms)
+  GT : 오늘은 비가 와서 길이 미끄럽고 사람들은 신발을 조심스럽게 신었다 그리고 모두가 걱정했다.
+  M  : 오늘은 ____ 와서 길이 미끄럽고 사람들은 ____ 조심스럽게 신었다 그리고 모두가 걱정했다.
+  R  : 오늘은 비가 와서 길이 미끄럽고 사람들은 비를 조심스럽게 신었다 그리고 모두가 걱정했다.
+  J  : ‘비를 신다’는 자연스럽지 않음
+
+[7/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=5113ms, rep=7331ms, judge=4122ms)
+  GT : The small cat quietly watched the blue bird fly across the green field.
+  M  : The small cat quietly watched the blue bird fly across the ____ ____
+  R  : The small cat quietly watched the blue bird fly across the open sky.
+  J  : Grammatically correct, fluent, and "open sky" naturally completes the two blanks.
+
+[7/50] KO exact=false slot=1/2 any=false ord=false flu=4/5 ok=true (gen=15822ms, rep=169272ms, judge=12203ms)
+  GT : 나는 매일 아침에 일어나서 창문을 열고 신선한 공기를 마신다 그리고 차 한 잔을 마신다.
+  M  : 나는 매일 ____ ____ 창문을 열고 신선한 공기를 마신다 그리고 차 한 잔을 마신다.
+  R  : 나는 매일 아침에 바깥 창문을 열고 신선한 공기를 마신다 그리고 차 한 잔을 마신다.
+  J  : 자연스러운 표현이지만 '바깥 창문'이 다소 어색
+
+[8/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=6979ms, rep=6762ms, judge=4650ms)
+  GT : The child runs through the meadow while birds sing above.
+  M  : The child runs ____ the ____ while birds sing above.
+  R  : The child runs across the field while birds sing above.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[8/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=16263ms, rep=9817ms, judge=6724ms)
+  GT : 오늘 아침에 신선한 바람이 불어와 마음이 가벼워졌으며 따스한 햇살이 창문을 가득 채웠다.
+  M  : 오늘 아침에 신선한 바람이 ____ 마음이 가벼워졌으며 따스한 햇살이 창문을 가득 ____
+  R  : 오늘 아침에 신선한 바람이 불어와 마음이 가벼워졌으며 따스한 햇살이 창문을 가득 채웠다.
+  J  : 문법적으로 올바르고 자연스러운 표현이며, 빈칸에 무리 없이 들어가며 의미가 일관됩니다.
+
+[9/50] EN exact=false slot=1/2 any=true ord=true flu=5/5 ok=true (gen=5047ms, rep=4208ms, judge=4680ms)
+  GT : The child carefully placed the bright red ball on the green rug.
+  M  : The child ____ placed ____ bright red ball on the green rug.
+  R  : The child carefully placed a bright red ball on the green rug.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[10/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=6948ms, rep=6016ms, judge=4305ms)
+  GT : The sun rises over the quiet valley, bringing warmth to the sleepy town.
+  M  : The sun ____ over the quiet valley, bringing warmth to the ____ town.
+  R  : The sun rises over the quiet valley, bringing warmth to the sleepy town.
+  J  : Grammatically correct, fluent, and the repaired sentence naturally fits the masked structure.
+
+[11/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=7522ms, rep=6103ms, judge=4075ms)
+  GT : The curious cat chased the bright red ball across the quiet garden.
+  M  : The curious cat chased the bright ____ ____ across the quiet garden.
+  R  : The curious cat chased the bright blue butterfly across the quiet garden.
+  J  : The repair is grammatically correct, fluent, and naturally fits the masked structure.
+
+[11/50] KO exact=false slot=0/2 any=false ord=false flu=4/5 ok=true (gen=10735ms, rep=13372ms, judge=9940ms)
+  GT : 아침에 일어나서 물을 마시고 책을 읽으며 차를 마시고 오늘 계획을 세웠다.
+  M  : 아침에 일어나서 물을 마시고 책을 읽으며 차를 마시고 ____ 계획을 ____
+  R  : 아침에 일어나서 물을 마시고 책을 읽으며 차를 마시고 오늘의 계획을 세우고.
+  J  : 문법적으로는 맞고, 빈칸에 자연스럽게 들어가지만 끝에 ‘세우고’가 연결형으로 끝나서 약간 어색함.
+
+[12/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=4931ms, rep=4359ms, judge=4345ms)
+  GT : The small bird perched on the branch and sang a gentle tune.
+  M  : The small bird perched on the ____ and sang a gentle ____
+  R  : The small bird perched on the branch and sang a gentle song.
+  J  : Grammatically correct, fluent, and the repair naturally fits the masked sentence.
+
+[12/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=25424ms, rep=8886ms, judge=6538ms)
+  GT : 오늘 아침에 커피를 마시며 책을 읽었고, 그때 친구가 전화를 걸어와서 이야기했다.
+  M  : 오늘 아침에 커피를 마시며 ____ 읽었고, 그때 친구가 전화를 ____ 이야기했다.
+  R  : 오늘 아침에 커피를 마시며 책을 읽었고, 그때 친구가 전화를 걸어 이야기했다.
+  J  : 문법적으로 올바르고 자연스러운 표현이며, 빈칸에 무리 없이 들어갑니다.
+
+[13/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=6745ms, rep=9132ms, judge=5620ms)
+  GT : The cat chased the mouse across the quiet garden slowly.
+  M  : The cat chased the mouse ____ the quiet garden ____
+  R  : The cat chased the mouse through the quiet garden silently.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fills both blanks with appropriate words.
+
+[13/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=10936ms, rep=8356ms, judge=6717ms)
+  GT : 오늘은 비가 오고 있어, 그래서 길을 걷는 사람들은 우산을 들고 있다.
+  M  : 오늘은 비가 ____ 있어, 그래서 길을 걷는 사람들은 ____ 들고 있다.
+  R  : 오늘은 비가 많이 있어, 그래서 길을 걷는 사람들은 우산을 들고 있다.
+  J  : 문법적으로 맞고 자연스러운 표현이며 빈칸에 무리 없이 들어감
+
+[14/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6883ms, rep=6096ms, judge=4277ms)
+  GT : The cat slept on the warm windowsill, unaware of the passing breeze.
+  M  : The cat slept on the ____ ____ unaware of the passing breeze.
+  R  : The cat slept on the warm blanket unaware of the passing breeze.
+  J  : The repair is grammatically correct, fluent, and naturally fits the two-word blank space.
+
+[14/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=17270ms, rep=12071ms, judge=6539ms)
+  GT : 오늘 아침에 신선한 바나나를 먹으며 상쾌한 기분으로 활기찬 하루를 시작했다.
+  M  : 오늘 아침에 ____ 바나나를 먹으며 상쾌한 기분으로 활기찬 하루를 ____
+  R  : 오늘 아침에 달콤한 바나나를 먹으며 상쾌한 기분으로 활기찬 하루를 보냈다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 '달콤한'과 '보냈다'가 무리 없이 들어가 문장이 매끄럽다.
+
+[15/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=7885ms, rep=7632ms, judge=4686ms)
+  GT : The cat sat on the mat and purred softly today.
+  M  : The cat ____ on the mat and purred ____ today.
+  R  : The cat sat on the mat and purred softly today.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[15/50] KO exact=false slot=1/2 any=false ord=false flu=4/5 ok=true (gen=8966ms, rep=10146ms, judge=14482ms)
+  GT : 오늘 아침에 나는 커피를 마시며 창밖을 바라보았다 그리고 새소리를 들으며 책을 읽었다.
+  M  : ____ 아침에 나는 커피를 마시며 창밖을 ____ 그리고 새소리를 들으며 책을 읽었다.
+  R  : 오늘 아침에 나는 커피를 마시며 창밖을 바라보며 그리고 새소리를 들으며 책을 읽었다.
+  J  : 문법은 맞고 자연스러움은 다소 중복이 있지만 무리 없이 들어감
+
+[16/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=7357ms, rep=10247ms, judge=4706ms)
+  GT : The cat chased the mouse across the quiet garden in the evening light.
+  M  : The cat chased ____ mouse across the quiet garden in the ____ light.
+  R  : The cat chased a mouse across the quiet garden in the soft light.
+  J  : Grammatically correct, fluent, and the repaired sentence naturally fits the masked structure.
+
+[16/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=10081ms, rep=10081ms, judge=6047ms)
+  GT : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 창밖에는 새들이 노래했다.
+  M  : 오늘 ____ 나는 커피를 마시며 ____ 읽었고, 창밖에는 새들이 노래했다.
+  R  : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 창밖에는 새들이 노래했다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 무리 없이 들어가며 의미도 일관됩니다.
+
+[17/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=6454ms, rep=9145ms, judge=5031ms)
+  GT : The child ran through the garden, chasing a bright blue kite.
+  M  : The child ran ____ the ____ chasing a bright blue kite.
+  R  : The child ran across the street chasing a bright blue kite.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fills the blanks in the masked frame.
+
+[17/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=10983ms, rep=6241ms, judge=6282ms)
+  GT : 오늘 아침에 나는 커피 한 잔을 마시며 조용히 책을 읽었다.
+  M  : 오늘 아침에 나는 ____ 한 잔을 마시며 조용히 ____ 읽었다.
+  R  : 오늘 아침에 나는 커피 한 잔을 마시며 조용히 책을 읽었다.
+  J  : 문법적으로 자연스럽고 빈칸에 무리 없이 들어감
+
+[18/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=4769ms, rep=11418ms, judge=4049ms)
+  GT : The cat sat on the mat and stared at the bright light.
+  M  : The cat sat on the ____ and stared at the bright ____
+  R  : The cat sat on the mat and stared at the bright star.
+  J  : Grammatically correct, fluent, and the replacements fit naturally into the masked sentence.
+
+[18/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=12966ms, rep=14246ms, judge=6809ms)
+  GT : 우리는 오늘 아침에 학교에 가서 수업을 들으며 점심을 먹고 친구와 이야기했다.
+  M  : 우리는 오늘 아침에 학교에 가서 ____ 들으며 점심을 먹고 ____ 이야기했다.
+  R  : 우리는 오늘 아침에 학교에 가서 음악을 들으며 점심을 먹고 서로 이야기했다.
+  J  : 문법적으로 맞고 자연스럽다
+
+[19/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6442ms, rep=3703ms, judge=4762ms)
+  GT : The child happily played with a bright red ball under the sunny sky.
+  M  : The child happily played with a ____ red ball under the ____ sky.
+  R  : The child happily played with a bright red ball under the blue sky.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fills the blanks in the masked frame.
+
+[19/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=12838ms, rep=28377ms, judge=7540ms)
+  GT : 바람이 부는 저녁에 사람들은 모여 이야기를 나누며 서로를 따뜻하게 이해했다.
+  M  : 바람이 부는 저녁에 사람들은 모여 이야기를 나누며 ____ 따뜻하게 ____
+  R  : 바람이 부는 저녁에 사람들은 모여 이야기를 나누며 서로 따뜻하게 웃었다.
+  J  : 문장이 문법적으로 완전하고 자연스럽다. 빈칸에 '서로'와 '웃었다'가 무리 없이 들어가며 의미도 일관된다.
+
+[20/50] EN exact=true slot=2/2 any=false ord=false flu=5/5 ok=true (gen=4379ms, rep=2639ms, judge=5179ms)
+  GT : The sun rises in the east and sets in the west every day.
+  M  : The sun rises in the east and sets in ____ west every ____
+  R  : The sun rises in the east and sets in the west every day.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally completes the masked structure.
+
+[20/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=11981ms, rep=28391ms, judge=13231ms)
+  GT : 나는 오늘 아침에 커피를 마시며 책을 읽었고, 그때 부드러운 바람이 불었다.
+  M  : 나는 오늘 아침에 커피를 마시며 ____ 읽었고, 그때 부드러운 바람이 ____
+  R  : 나는 오늘 아침에 커피를 마시며 책을 읽었고, 그때 부드러운 바람이 창문을 열어 주었다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 무리 없이 들어가 있습니다.
+
+[21/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=6003ms, rep=5868ms, judge=4720ms)
+  GT : The cat chased the mouse through the quiet garden in bright sunlight.
+  M  : The cat ____ the mouse through the quiet ____ in bright sunlight.
+  R  : The cat chased the mouse through the quiet garden in bright sunlight.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[21/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=27276ms, rep=15130ms, judge=7880ms)
+  GT : 하늘이 파랗고 구름이 흰색이며 바람이 시원하게 부는 날, 이곳은 평화로운 산책로가 있는 작은 마을의 한가운데에 있다.
+  M  : 하늘이 파랗고 구름이 흰색이며 ____ 시원하게 부는 날, 이곳은 평화로운 ____ 있는 작은 마을의 한가운데에 있다.
+  R  : 하늘이 파랗고 구름이 흰색이며 바람이 시원하게 부는 날, 이곳은 평화로운 고요한 작은 마을의 한가운데에 있다.
+  J  : 문법적으로 맞고 자연스러운 표현이며 빈칸에 무리 없이 들어감
+
+[22/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=5824ms, rep=7481ms, judge=4241ms)
+  GT : The sun sets over the quiet valley, painting the sky with golden light.
+  M  : The ____ ____ over the quiet valley, painting the sky with golden light.
+  R  : The sun set over the quiet valley, painting the sky with golden light.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[22/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=18455ms, rep=8307ms, judge=5031ms)
+  GT : 나는 아침에 커피를 마시며 책을 읽었고, 그 후에는 친구와 함께 공원에서 산책했다.
+  M  : 나는 아침에 커피를 마시며 책을 ____ 그 후에는 친구와 함께 공원에서 ____
+  R  : 나는 아침에 커피를 마시며 책을 읽었다. 그 후에는 친구와 함께 공원에서 산책했다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 무리 없이 들어가며 의미도 일관됩니다.
+
+[23/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=6850ms, rep=4406ms, judge=5187ms)
+  GT : The sun rises over the quiet valley as birds begin to sing.
+  M  : The sun rises ____ ____ quiet valley as birds begin to sing.
+  R  : The sun rises in a quiet valley as birds begin to sing.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[23/50] KO exact=false slot=1/2 any=false ord=false flu=4/5 ok=true (gen=12472ms, rep=8353ms, judge=13615ms)
+  GT : 바람이 부는 정원에서 꽃이 피고 새가 노래하며 사람은 웃는다 아름답다.
+  M  : 바람이 ____ 정원에서 꽃이 피고 새가 노래하며 사람은 ____ 아름답다.
+  R  : 바람이 부는 정원에서 꽃이 피고 새가 노래하며 사람은 그리 아름답다.
+  J  : 문법적으로 맞고 자연스러운 표현이지만, '그리'가 다소 고어적이거나 문학적 느낌을 줄 수 있다.
+
+[24/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=4721ms, rep=5434ms, judge=4113ms)
+  GT : The child reads a book under the bright summer sky.
+  M  : The child ____ a ____ under the bright summer sky.
+  R  : The child found a treasure under the bright summer sky.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[25/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=5976ms, rep=56166ms, judge=4288ms)
+  GT : The cat sat on the warm mat beside the quiet fireplace.
+  M  : The cat sat on the ____ mat beside the quiet ____
+  R  : The cat sat on the soft mat beside the quiet dog.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[25/50] KO exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=12723ms, rep=116703ms, judge=12666ms)
+  GT : 봄비가 내리면 작은 나무는 새싹을 부드럽게 자라게 한다 조용히 흐르며 햇빛이 스며든다.
+  M  : ____ 내리면 작은 ____ 새싹을 부드럽게 자라게 한다 조용히 흐르며 햇빛이 스며든다.
+  R  : 비 내리면 작은 새싹을 부드럽게 자라게 한다 조용히 흐르며 햇빛이 스며든다.
+  J  : 문장이 주어가 없고 문법이 어색하며 자연스럽지 않음
+
+[26/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=7004ms, rep=6552ms, judge=3796ms)
+  GT : The cat sat on the mat and purred softly today.
+  M  : The ____ sat on the ____ and purred softly today.
+  R  : The cat sat on the mat and purred softly today.
+  J  : The repair is grammatically correct, fluent, and naturally fits the masked structure.
+
+[26/50] KO exact=false slot=1/2 any=false ord=false flu=3/5 ok=false (gen=17735ms, rep=19371ms, judge=13221ms)
+  GT : 오늘 아침에 학교에서 공부를 열심히 하고, 친구와 점심을 먹고, 운동도 했다.
+  M  : 오늘 아침에 학교에서 공부를 열심히 하고, 친구와 ____ 먹고, 운동도 ____
+  R  : 오늘 아침에 학교에서 공부를 열심히 하고, 친구와 점심을 먹고, 운동도 했어요.
+  J  : 시간이 맞지 않아 자연스럽지 않음
+
+[27/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=4671ms, rep=4162ms, judge=4768ms)
+  GT : The sun rises over the quiet hills each morning, painting the sky with gold.
+  M  : The sun rises over the ____ hills each morning, ____ the sky with gold.
+  R  : The sun rises over the rolling hills each morning, painting the sky with gold.
+  J  : Grammatically correct, fluent, and the repaired sentence naturally fits the masked structure.
+
+[28/50] EN exact=false slot=1/2 any=false ord=false flu=2/5 ok=false (gen=6930ms, rep=19555ms, judge=10684ms)
+  GT : The sun sets slowly over the quiet river, painting the sky with gold.
+  M  : The sun sets slowly over the quiet river, ____ ____ sky with gold.
+  R  : The sun sets slowly over the quiet river, in the sky with gold.
+  J  : The repair is grammatically okay but awkward and only fills one blank; it doesn’t naturally complete the two‑blank frame.
+
+[28/50] KO exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=13055ms, rep=139091ms, judge=8554ms)
+  GT : 오늘 아침 공원에서 새들이 노래하며 사람들을 맞이했고, 따뜻한 햇살이 흐르고 아이들은 뛰어다녔다.
+  M  : 오늘 ____ 공원에서 새들이 노래하며 사람들을 ____ 따뜻한 햇살이 흐르고 아이들은 뛰어다녔다.
+  R  : 오늘 아름다운 공원에서 새들이 노래하며 사람들을 가득 따뜻한 햇살이 흐르고 아이들은 뛰어다녔다.
+  J  : 문법적으로 어색하고 자연스럽지 않음. '사람들을 가득 따뜻한 햇살이 흐르고'는 부정확한 표현이며, 빈칸에 맞는 단어가 부적절하게 삽입됨.
+
+[29/50] EN exact=false slot=0/2 any=false ord=false flu=4/5 ok=true (gen=6489ms, rep=14924ms, judge=8061ms)
+  GT : The garden grows bright flowers when sunlight touches each leaf gently.
+  M  : The garden ____ ____ flowers when sunlight touches each leaf gently.
+  R  : The garden bloomed into flowers when sunlight touches each leaf gently.
+  J  : The repaired sentence is grammatically correct and fluent, and it fits naturally into the masked frame, though the phrase "bloomed into flowers" is slightly less common than other options.
+
+[29/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=10099ms, rep=11809ms, judge=9009ms)
+  GT : 오늘 아침에 나는 커피를 마시며 책을 읽고, 창문 밖을 바라보았다.
+  M  : 오늘 아침에 나는 커피를 ____ 책을 읽고, 창문 밖을 ____
+  R  : 오늘 아침에 나는 커피를 마시고 책을 읽고, 창문 밖을 보며.
+  J  : 문법적으로 올바르고 자연스러운 표현이며, 빈칸에 무리 없이 들어갑니다.
+
+[30/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=3917ms, rep=4963ms, judge=5621ms)
+  GT : The garden filled with fragrant flowers brightened the quiet afternoon.
+  M  : The ____ filled with fragrant flowers brightened the ____ afternoon.
+  R  : The garden filled with fragrant flowers brightened the late afternoon.
+  J  : Grammatically correct, fluent, and the repaired words naturally fill the blanks.
+
+[30/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=21148ms, rep=9073ms, judge=7224ms)
+  GT : 오늘 아침에 나는 커피를 마시며 창밖을 바라보며 하루를 계획하고 책을 읽었다.
+  M  : 오늘 ____ ____ 커피를 마시며 창밖을 바라보며 하루를 계획하고 책을 읽었다.
+  R  : 오늘 아침에 따뜻한 커피를 마시며 창밖을 바라보며 하루를 계획하고 책을 읽었다.
+  J  : 자연스럽고 빈칸에 잘 맞음
+
+[31/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=5748ms, rep=4016ms, judge=4357ms)
+  GT : The small bird perched on the branch and sang a bright morning song.
+  M  : The small ____ perched on the ____ and sang a bright morning song.
+  R  : The small bird perched on the branch and sang a bright morning song.
+  J  : Grammatically correct, fluent, and the repair naturally fits the masked structure.
+
+[31/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=10494ms, rep=5136ms, judge=6227ms)
+  GT : 나는 오늘 아침에 커피를 마시며 책을 읽었고, 그리고 친구에게 전화를 걸었다.
+  M  : 나는 오늘 아침에 커피를 마시며 ____ 읽었고, 그리고 친구에게 ____ 걸었다.
+  R  : 나는 오늘 아침에 커피를 마시며 책을 읽었고, 그리고 친구에게 전화를 걸었다.
+  J  : 문장이 문법적으로 정확하고 자연스럽습니다. 빈칸에 '책을', '전화를'이 무리 없이 들어가며 의미도 일관됩니다.
+
+[32/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6360ms, rep=6886ms, judge=5554ms)
+  GT : The child learned to swim by practicing in the calm lake every morning.
+  M  : The child learned to swim by practicing in ____ calm lake ____ morning.
+  R  : The child learned to swim by practicing in the calm lake in the morning.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fills the blanks in the masked frame.
+
+[33/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=5615ms, rep=15123ms, judge=5291ms)
+  GT : The small boat drifted slowly across the calm sea at dusk.
+  M  : The small boat drifted ____ across the ____ sea at dusk.
+  R  : The small boat drifted slowly across the vast sea at dusk.
+  J  : The repaired sentence correctly fills both blanks with appropriate adverb and adjective, is grammatically sound, and reads naturally and fluently.
+
+[33/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=8285ms, rep=11696ms, judge=10521ms)
+  GT : 오늘은 비가 내려서 길을 걷는 사람들 모두 신발을 조심스럽게 닦았다.
+  M  : 오늘은 비가 ____ 길을 걷는 사람들 모두 신발을 ____ 닦았다.
+  R  : 오늘은 비가 오는 길을 걷는 사람들 모두 신발을 물에 닦았다.
+  J  : 문법적으로 맞고 자연스러운 표현이며 빈칸에 무리 없이 들어간다.
+
+[34/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=5690ms, rep=10705ms, judge=5502ms)
+  GT : The child played with the ball in the bright sunny park.
+  M  : The ____ played ____ the ball in the bright sunny park.
+  R  : The child played with the ball in the bright sunny park.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[34/50] KO exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=14882ms, rep=94328ms, judge=12170ms)
+  GT : 오늘 아침에 공원에서 새를 보며 산책했고, 시원한 바람을 맞으며 노래를 들었다.
+  M  : 오늘 아침에 ____ 새를 보며 산책했고, 시원한 바람을 맞으며 ____ 들었다.
+  R  : 오늘 아침에 새를 보며 산책했고, 시원한 바람을 맞으며 새를 들었다.
+  J  : 빈칸에 들어갈 형용사나 부사가 빠져서 문장이 부자연스럽고, '새를 들었다'는 표현도 어색합니다.
+
+[35/50] EN exact=false slot=1/2 any=true ord=true flu=5/5 ok=true (gen=5771ms, rep=9602ms, judge=4964ms)
+  GT : The child runs quickly through the quiet garden, chasing the bright butterfly.
+  M  : The child runs quickly through ____ quiet garden, ____ the bright butterfly.
+  R  : The child runs quickly through a quiet garden, chasing the bright butterfly.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally completes the masked frame.
+
+[35/50] KO exact=false slot=0/2 any=false ord=false flu=3/5 ok=false (gen=8928ms, rep=11443ms, judge=11071ms)
+  GT : 아침에 일어나서 창문을 열고 햇살을 맞으며 차 한 잔을 마신다.
+  M  : 아침에 일어나서 창문을 열고 ____ 맞으며 차 한 잔을 ____
+  R  : 아침에 일어나서 창문을 열고 바람 맞으며 차 한 잔을 마시고.
+  J  : 첫 번째 빈칸에 '바람을'이 빠져서 문법이 조금 어색하지만 전체적으로는 자연스럽게 읽힙니다.
+
+[36/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=5588ms, rep=6233ms, judge=5003ms)
+  GT : The wind whispered through the trees, carrying a scent of distant summer.
+  M  : The wind ____ through the trees, ____ a scent of distant summer.
+  R  : The wind blew through the trees, carrying a scent of distant summer.
+  J  : Grammatically correct, fluent, and the repair naturally fits the masked structure.
+
+[36/50] KO exact=false slot=0/2 any=false ord=false flu=4/5 ok=true (gen=12933ms, rep=17311ms, judge=9370ms)
+  GT : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 그때 창밖으로 햇빛이 들어왔다.
+  M  : 오늘 아침에 나는 커피를 마시며 책을 읽었고, ____ ____ 햇빛이 들어왔다.
+  R  : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 따뜻한 부드러운 햇빛이 들어왔다.
+  J  : 문법적으로 맞고 자연스러운 문장이나, ‘따뜻한 부드러운’이라는 두 형용사의 순서가 다소 어색할 수 있다.
+
+[37/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6077ms, rep=7912ms, judge=6165ms)
+  GT : The cat chased the mouse across the kitchen floor quickly.
+  M  : The ____ chased the mouse across the kitchen ____ quickly.
+  R  : The cat chased the mouse across the kitchen so quickly.
+  J  : The repair is grammatically correct, fluent, and fits naturally into the masked sentence.
+
+[38/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=6346ms, rep=5160ms, judge=4760ms)
+  GT : The wind whispered softly through the quiet, empty streets at dusk.
+  M  : The wind whispered softly through ____ quiet, empty ____ at dusk.
+  R  : The wind whispered softly through the quiet, empty streets at dusk.
+  J  : Grammatically correct, fluent, and the repaired phrase naturally fits the masked structure.
+
+[38/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=16099ms, rep=53855ms, judge=7592ms)
+  GT : 아침 햇살이 창문을 통해 들어와 방을 따뜻하게 밝히고 있다 그리고 사람은 잠에서 깨어난다.
+  M  : 아침 햇살이 창문을 통해 ____ 방을 따뜻하게 ____ 있다 그리고 사람은 잠에서 깨어난다.
+  R  : 아침 햇살이 창문을 통해 그 방을 따뜻하게 비추고 있다 그리고 사람은 잠에서 깨어난다.
+  J  : 문법적으로 맞고 자연스럽게 빈칸을 채워서 의미가 명확합니다.
+
+[39/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=4635ms, rep=23001ms, judge=5195ms)
+  GT : The cat sat on the mat while the dog slept quietly nearby.
+  M  : The cat sat on the ____ while the dog slept quietly ____
+  R  : The cat sat on the mat while the dog slept quietly in the yard.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally completes both blanks in the masked frame.
+
+[39/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=19387ms, rep=5903ms, judge=7525ms)
+  GT : 오늘은 비가 와서 길이 젖어 있었고, 따뜻한 커피 한 잔을 마시며 책을 읽고 있었어요.
+  M  : 오늘은 ____ 와서 길이 젖어 있었고, 따뜻한 커피 한 ____ 마시며 책을 읽고 있었어요.
+  R  : 오늘은 비가 와서 길이 젖어 있었고, 따뜻한 커피 한 잔 마시며 책을 읽고 있었어요.
+  J  : 문법적으로 정확하고 자연스러운 표현입니다.
+
+[40/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=8550ms, rep=4584ms, judge=3975ms)
+  GT : The cat chased the mouse quickly across the kitchen floor.
+  M  : The ____ ____ the mouse quickly across the kitchen floor.
+  R  : The cat chased the mouse quickly across the kitchen floor.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[41/50] EN exact=false slot=1/2 any=false ord=false flu=4/5 ok=true (gen=5407ms, rep=4520ms, judge=8064ms)
+  GT : The cat sleeps on the warm windowsill while the rain falls softly outside.
+  M  : The cat ____ on the warm windowsill while the rain falls ____ outside.
+  R  : The cat sat on the warm windowsill while the rain falls softly outside.
+  J  : Natural and fluent, but slight tense mismatch (sat vs. falls).
+
+[41/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=10214ms, rep=9233ms, judge=4998ms)
+  GT : 오늘은 학교에서 친구들과 함께 점심을 먹으며 서로 웃으며 즐거운 시간을 보냈다.
+  M  : 오늘은 학교에서 친구들과 함께 점심을 먹으며 서로 웃으며 ____ ____ 보냈다.
+  R  : 오늘은 학교에서 친구들과 함께 점심을 먹으며 서로 웃으며 즐거운 시간을 보냈다.
+  J  : 문법적으로 완전하고 자연스러운 표현이며, 빈칸에 무리 없이 들어간다.
+
+[42/50] EN exact=false slot=1/2 any=true ord=true flu=5/5 ok=true (gen=7621ms, rep=8682ms, judge=6010ms)
+  GT : The bird flies over the green meadow and sings a bright song.
+  M  : The bird flies over ____ green meadow and ____ a bright song.
+  R  : The bird flies over a green meadow and sings a bright song.
+  J  : Grammatically correct, fluent, and fits the blanks naturally.
+
+[42/50] KO exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=14073ms, rep=105540ms, judge=11120ms)
+  GT : 오늘 아침에 차를 세우고 커피를 마셨다 그리고 도서관에 가서 책을 읽었다.
+  M  : 오늘 아침에 ____ 세우고 ____ 마셨다 그리고 도서관에 가서 책을 읽었다.
+  R  : 오늘 아침에 커피를 세우고 물을 마셨다 그리고 도서관에 가서 책을 읽었다.
+  J  : 세우다가 커피에 어울리지 않아 자연스럽지 않음
+
+[43/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=6073ms, rep=7854ms, judge=9438ms)
+  GT : The bird flies across the bright blue sky while the wind gently sways.
+  M  : The bird flies across the bright blue ____ while the wind ____ sways.
+  R  : The bird flies across the bright blue sky while the wind gently sways.
+  J  : Grammatically correct, fluent, and the repaired sentence fits naturally into the masked frame.
+
+[43/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=10694ms, rep=16586ms, judge=7857ms)
+  GT : 오늘 아침에 나는 신선한 커피를 마시며 책을 읽었고, 창문 밖에는 햇살이 비추었다.
+  M  : 오늘 아침에 나는 신선한 커피를 마시며 책을 ____ 창문 밖에는 ____ 비추었다.
+  R  : 오늘 아침에 나는 신선한 커피를 마시며 책을 읽었다. 창문 밖에는 햇빛이 비추었다.
+  J  : 문법적으로 맞고 자연스럽게 빈칸에 들어가며 문장이 매끄럽다.
+
+[44/50] EN exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=4987ms, rep=3459ms, judge=9681ms)
+  GT : The child quietly reads a book while the rain softly taps the window.
+  M  : The child quietly reads a book while the rain softly taps ____ ____
+  R  : The child quietly reads a book while the rain softly taps on the window.
+  J  : Grammar and fluency are fine, but the repair adds three words instead of the two expected by the blanks, so it does not fit the masked frame.
+
+[44/50] KO exact=false slot=0/2 any=false ord=false flu=2/5 ok=false (gen=24120ms, rep=12988ms, judge=15154ms)
+  GT : 오늘은 바람이 부드럽고 햇빛이 따뜻해 보이며, 새들이 노래를 부르며, 산책길이 평화롭습니다.
+  M  : 오늘은 바람이 ____ 햇빛이 따뜻해 보이며, 새들이 노래를 ____ 산책길이 평화롭습니다.
+  R  : 오늘은 바람이 부는 햇빛이 따뜻해 보이며, 새들이 노래를 부르는 산책길이 평화롭습니다.
+  J  : 문장 구조가 어색하고 '바람이 부는 햇빛'이라는 표현이 자연스럽지 않음
+
+[45/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=5251ms, rep=9304ms, judge=6261ms)
+  GT : The cat slept peacefully on the warm windowsill during the bright afternoon.
+  M  : The cat slept peacefully on the warm windowsill ____ the bright ____
+  R  : The cat slept peacefully on the warm windowsill in the bright sunlight.
+  J  : The repair is grammatically correct, fluent, and naturally completes the masked sentence.
+
+[45/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=10473ms, rep=34348ms, judge=9484ms)
+  GT : 봄바람이 부드럽게 산책로를 가득 채워서 사람들은 기분 좋은 웃음을 나눠요.
+  M  : 봄바람이 부드럽게 산책로를 가득 ____ 사람들은 기분 ____ 웃음을 나눠요.
+  R  : 봄바람이 부드럽게 산책로를 가득 채우고 사람들은 기분 좋은 웃음을 나눠요.
+  J  : 문법적으로 맞고 자연스러우며 빈칸에 무리 없이 들어감
+
+[46/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=7762ms, rep=4920ms, judge=4587ms)
+  GT : The sun rises over the quiet valley, bringing light to all living things.
+  M  : The sun rises ____ the quiet valley, bringing ____ to all living things.
+  R  : The sun rises over the quiet valley, bringing light to all living things.
+  J  : Grammatically correct, fluent, and the repaired words fit naturally into the masked sentence.
+
+[47/50] EN exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=6639ms, rep=7955ms, judge=4467ms)
+  GT : The cat sat on the mat and purred softly quietly.
+  M  : The ____ ____ on the mat and purred softly quietly.
+  R  : The cat sat on the mat and purred softly quietly.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally fits the masked structure.
+
+[47/50] KO exact=true slot=2/2 any=true ord=true flu=5/5 ok=true (gen=14397ms, rep=23239ms, judge=8105ms)
+  GT : 나는 오늘 아침에 커피를 마시며 책을 읽으며 시간을 보냈다 그리고 친구와 함께 걸었다.
+  M  : 나는 오늘 아침에 커피를 마시며 책을 ____ 시간을 보냈다 그리고 친구와 ____ 걸었다.
+  R  : 나는 오늘 아침에 커피를 마시며 책을 읽으며 시간을 보냈다 그리고 친구와 함께 걸었다.
+  J  : 문법적으로 올바르고 자연스러운 표현이며, 빈칸에 무리 없이 들어가며 의미도 일관됩니다.
+
+[48/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6676ms, rep=4093ms, judge=4824ms)
+  GT : The cat sleeps quietly on the warm windowsill, watching the rain fall outside.
+  M  : The cat ____ quietly on ____ warm windowsill, watching the rain fall outside.
+  R  : The cat sat quietly on the warm windowsill, watching the rain fall outside.
+  J  : The repaired sentence is grammatically correct, fluent, and fits naturally into the masked frame.
+
+[49/50] EN exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=6340ms, rep=11904ms, judge=6352ms)
+  GT : The book on the table will be read by many people.
+  M  : The book on ____ ____ will be read by many people.
+  R  : The book on the future will be read by many people.
+  J  : Grammatically correct, fluent, and the phrase "the future" naturally completes the masked sentence.
+
+[49/50] KO exact=false slot=1/2 any=false ord=false flu=5/5 ok=true (gen=15615ms, rep=22808ms, judge=11499ms)
+  GT : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 그때는 창밖에 비가 내리며 시원한 바람이 불었다.
+  M  : 오늘 아침에 나는 커피를 마시며 ____ 읽었고, 그때는 ____ 비가 내리며 시원한 바람이 불었다.
+  R  : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 그때는 갑자기 비가 내리며 시원한 바람이 불었다.
+  J  : 문법적으로 맞고 자연스러우며 빈칸에 잘 맞음
+
+[50/50] EN exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=5466ms, rep=5590ms, judge=6616ms)
+  GT : The cat sat on the mat and watched the birds outside.
+  M  : The cat sat on the mat ____ ____ the birds outside.
+  R  : The cat sat on the mat while watching the birds outside.
+  J  : The repaired sentence is grammatically correct, fluent, and naturally completes the masked frame.
+
+[50/50] KO exact=false slot=0/2 any=false ord=false flu=5/5 ok=true (gen=18298ms, rep=11751ms, judge=6637ms)
+  GT : 오늘 아침에 나는 커피를 마시며 책을 읽었고, 그때 밖은 맑았다.
+  M  : 오늘 아침에 나는 커피를 마시며 책을 ____ 그때 밖은 ____
+  R  : 오늘 아침에 나는 커피를 마시며 책을 읽었다 그때 밖은 추웠다.
+  J  : 문법적으로 완전하고 자연스러운 문장입니다. 빈칸에 '읽었다'와 '추웠다'가 잘 맞아 들어가며 의미도 부드럽습니다.
+
+
+=== Summary ===
+EN trials=50 | exact=13 (26.0%) | slot2=13 (26.0%) | slot1+=34 (68.0%) | anywhere=16 (32.0%) | ordered=16 (32.0%) | flu_ok=48 (96.0%) avg_flu=4.84
+KO trials=41 | exact=6 (14.6%) | slot2=6 (14.6%) | slot1+=23 (56.1%) | anywhere=6 (14.6%) | ordered=6 (14.6%) | flu_ok=33 (80.5%) avg_flu=4.32
+
+CSV saved to out.csv
